@@ -1,4 +1,4 @@
-# ffmpeg_utils
+# flutter_ffmpeg_utils
 
 A Flutter plugin to execute raw FFmpeg commands on Android and iOS.
 

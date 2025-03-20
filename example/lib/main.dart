@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_ffmpeg_utils/flutter_ffmpeg_utils.dart';
 
@@ -12,9 +14,15 @@ class MyApp extends StatelessWidget {
   Future<void> runFFmpegCommand(List<String> command) async {
     try {
       final String result = await FlutterFfmpegUtils().executeFFmpeg(command);
-      print('FFmpeg Result: $result');
-    } catch (e) {
-      print('Error executing FFmpeg: $e');
+      developer.log('FFmpeg Result: $result', name: 'FlutterFfmpegUtils');
+    } catch (e, stackTrace) {
+      developer.log(
+        'Error executing FFmpeg: $e',
+        name: 'FlutterFfmpegUtils',
+        error: e,
+        stackTrace: stackTrace,
+      );
+      throw Exception('FFmpeg command execution failed: $e');
     }
   }
 
