@@ -1,6 +1,6 @@
 name: flutter_ffmpeg_utils
 description: "A Flutter plugin to execute FFmpeg commands on Android and iOS."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Raghav117/flutter_ffmpeg_utils
 repository: https://github.com/Raghav117/flutter_ffmpeg_utils
 

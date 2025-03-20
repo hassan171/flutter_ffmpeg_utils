@@ -1,3 +1,11 @@
+## 1.0.1
+- Renamed package to `flutter_ffmpeg_utils` and updated all references.
+- Added proper DartDoc comments to public API to meet pub.dev standards.
+- Replaced `print()` statements with `dart:developer.log` for improved logging.
+- Fixed argument handling for `executeFFmpeg` method.
+- Updated podspec to ensure correct iOS plugin linking.
+
+
 ## 1.0.0
 - Initial release with raw FFmpeg command execution support for Android and iOS.
 - Compatible with `mobile-ffmpeg` on Android and `ffmpeg-kit-ios-full` on iOS.
