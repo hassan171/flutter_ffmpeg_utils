@@ -1,0 +1,35 @@
+PODS:
+  - ffmpeg-kit-ios-full (6.0)
+  - ffmpeg_utils (1.0.0):
+    - ffmpeg-kit-ios-full (= 6.0)
+    - Flutter
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - ffmpeg_utils (from `.symlinks/plugins/ffmpeg_utils/ios`)
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+
+SPEC REPOS:
+  trunk:
+    - ffmpeg-kit-ios-full
+
+EXTERNAL SOURCES:
+  ffmpeg_utils:
+    :path: ".symlinks/plugins/ffmpeg_utils/ios"
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+
+SPEC CHECKSUMS:
+  ffmpeg-kit-ios-full: 34de6ec504f88a7289fe223c2db93afc2c9f931a
+  ffmpeg_utils: afd26b6edfab84f65f0ae0eba7a57183ae27cf56
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
+
+PODFILE CHECKSUM: 251cb053df7158f337c0712f2ab29f4e0fa474ce
+
+COCOAPODS: 1.16.2

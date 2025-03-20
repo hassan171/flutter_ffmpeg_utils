@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   // Execute FFmpeg Command
   Future<void> runFFmpegCommand(List<String> command) async {
     try {
-      final String result = await FfmpegUtils.executeFFmpeg(command);
+      final String result = await FfmpegUtils().executeFFmpeg(command);
       print('FFmpeg Result: $result');
     } catch (e) {
       print('Error executing FFmpeg: $e');

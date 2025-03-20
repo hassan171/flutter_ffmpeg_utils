@@ -1,15 +1,64 @@
 # ffmpeg_utils
 
-A new Flutter plugin project.
+A Flutter plugin to execute raw FFmpeg commands on Android and iOS.
 
-## Getting Started
+## 🚀 Features
+- Run **raw FFmpeg commands** directly on Android and iOS.
+- Supports complex media operations such as trimming, merging, and transcoding.
+- Fully compatible with `mobile-ffmpeg` on Android and `ffmpeg-kit-ios-full` on iOS.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Installation
+Add the following to your `pubspec.yaml`:
+```yaml
+dependencies:
+  ffmpeg_utils: ^1.0.0
+```
 
+Run:
+```bash
+flutter pub get
+```
+
+---
+
+## ⚡️ Usage
+```dart
+import 'package:ffmpeg_utils/ffmpeg_utils.dart';
+
+final ffmpegUtils = FfmpegUtils();
+
+// Run a raw FFmpeg command
+await ffmpegUtils.executeFFmpeg(['-i', 'input.mp4', '-vf', 'scale=640:480', 'output.mp4']);
+```
+
+---
+
+## 📚 Examples
+
+### 1. Compress a Video
+```dart
+await ffmpegUtils.executeFFmpeg(['-i', 'input.mp4', '-vcodec', 'libx264', '-crf', '28', 'output.mp4']);
+```
+
+### 2. Trim a Video
+```dart
+await ffmpegUtils.executeFFmpeg(['-i', 'input.mp4', '-ss', '00:00:10', '-to', '00:00:20', '-c', 'copy', 'output.mp4']);
+```
+
+### 3. Extract Audio from Video
+```dart
+await ffmpegUtils.executeFFmpeg(['-i', 'input.mp4', '-vn', '-acodec', 'libmp3lame', 'output.mp3']);
+```
+
+---
+
+## 🎯 Supported Platforms
+- ✅ Android (via `mobile-ffmpeg-full`)
+- ✅ iOS (via `ffmpeg-kit-ios-full`)
+
+---
+
+## 📝 License
+MIT License. See `LICENSE` for details.

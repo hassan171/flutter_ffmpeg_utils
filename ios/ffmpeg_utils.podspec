@@ -3,15 +3,16 @@
 # Run `pod lib lint ffmpeg_utils.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'ffmpeg_utils'
+  s.name             = 'flutter_ffmpeg_utils'
   s.version          = '1.0.0'
-  s.summary          = 'A new Flutter plugin project.'
+  s.summary          = 'Flutter plugin to execute FFmpeg commands.'
   s.description      = <<-DESC
-A new Flutter plugin project.
+A plugin that allows you to execute FFmpeg commands in your Flutter app on Android and iOS.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/Raghav117/flutter_ffmpeg_utils'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Raghav Garg' => 'raghavgarg.81.rg@gmail.com' }
+  s.ios.deployment_target = '13.0'
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
