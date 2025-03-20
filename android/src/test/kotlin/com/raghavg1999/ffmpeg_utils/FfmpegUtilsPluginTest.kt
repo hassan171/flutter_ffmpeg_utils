@@ -1,4 +1,4 @@
-package com.raghavg1999.ffmpeg_utils
+package com.raghavg1999.flutter_ffmpeg_utils
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel

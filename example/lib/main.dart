@@ -1,4 +1,4 @@
-import 'package:ffmpeg_utils/ffmpeg_utils.dart';
+import 'package:flutter_ffmpeg_utils/ffmpeg_utils.dart';
 import 'package:flutter/material.dart';
 
 void main() {

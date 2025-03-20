@@ -1,4 +1,4 @@
-package com.raghavg1999.ffmpeg_utils
+package com.raghavg1999.flutter_ffmpeg_utils
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
@@ -19,7 +19,7 @@ class FfmpegUtilsPlugin: FlutterPlugin, MethodCallHandler {
   private lateinit var channel : MethodChannel
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "ffmpeg_utils")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_ffmpeg_utils")
     channel.setMethodCallHandler(this)
   }
 

@@ -36,7 +36,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.raghavg1999.ffmpeg_utils
+        package: com.raghavg1999.flutter_ffmpeg_utils
         pluginClass: FfmpegUtilsPlugin
       ios:
         pluginClass: FfmpegUtilsPlugin
