@@ -2,10 +2,10 @@ import Flutter
 import UIKit
 import ffmpegkit
 
-public class FfmpegUtilsPlugin: NSObject, FlutterPlugin {
+public class FlutterFfmpegUtilsPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "ffmpeg_utils", binaryMessenger: registrar.messenger())
-    let instance = FfmpegUtilsPlugin()
+    let channel = FlutterMethodChannel(name: "flutter_ffmpeg_utils", binaryMessenger: registrar.messenger())
+    let instance = FlutterFfmpegUtilsPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

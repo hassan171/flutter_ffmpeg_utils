@@ -39,7 +39,7 @@ flutter:
         package: com.raghavg1999.flutter_ffmpeg_utils
         pluginClass: FfmpegUtilsPlugin
       ios:
-        pluginClass: FfmpegUtilsPlugin
+        pluginClass: FlutterFfmpegUtilsPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
