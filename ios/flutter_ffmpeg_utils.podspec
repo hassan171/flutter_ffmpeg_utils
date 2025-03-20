@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_ffmpeg_utils'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Flutter plugin to execute FFmpeg commands.'
   s.description      = <<-DESC
 A plugin that allows you to execute FFmpeg commands in your Flutter app on Android and iOS.

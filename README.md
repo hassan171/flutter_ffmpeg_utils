@@ -55,8 +55,8 @@ await ffmpegUtils.executeFFmpeg(['-i', 'input.mp4', '-vn', '-acodec', 'libmp3lam
 ---
 
 ## 🎯 Supported Platforms
-- ✅ Android (via `mobile-ffmpeg-full`)
-- ✅ iOS (via `ffmpeg-kit-ios-full`)
+- ✅ Android
+- ✅ iOS
 
 ---
 

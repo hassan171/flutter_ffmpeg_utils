@@ -1,3 +1,10 @@
+## 1.0.2
+- Added coroutine support for running FFmpeg commands concurrently on Android.
+- Improved background execution with async/DispatchQueue for iOS.
+- Fixed potential UI blocking by executing commands in the background.
+- Enhanced error handling and return code consistency for both platforms.
+
+
 ## 1.0.1
 - Renamed package to `flutter_ffmpeg_utils` and updated all references.
 - Added proper DartDoc comments to public API to meet pub.dev standards.

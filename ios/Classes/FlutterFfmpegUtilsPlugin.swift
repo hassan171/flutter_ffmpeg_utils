@@ -12,36 +12,37 @@ public class FlutterFfmpegUtilsPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
     case "executeFFmpeg":
-   if let commandList = call.arguments as? [String] {
-                
-                // ✅ Join the List<String> into a single command string
-                let command = commandList.joined(separator: " ")
-
-                print("Executing FFmpeg command: \(command)")  // Debug log
-
-                // ✅ Execute FFmpeg command using ffmpeg-kit
-                FFmpegKit.executeAsync(command) { session in
-                    guard let returnCode = session?.getReturnCode() else {
-                        result(FlutterError(code: "FFMPEG_ERROR", message: "Unknown error occurred", details: nil))
-                        return
-                    }
-
-                    if returnCode.isValueSuccess() {
-                        result("Success")
-                    } else {
-                        let returnCodeValue = returnCode.getValue()
-                        result(FlutterError(code: "FFMPEG_ERROR", message: "FFmpeg execution failed with code: \(returnCodeValue)", details: nil))
-                    }
-                }
-
-            } else {
-                // ❌ If command is not a list, throw error
-                result(FlutterError(code: "INVALID_ARGUMENTS", message: "Command must be a List<String>", details: nil))
-            }
-    
+      if let args = call.arguments as? [String] {
+        executeFFmpegCommand(args, result: result)
+      } else {
+        result(FlutterError(code: "INVALID_ARGUMENTS", message: "Command list not provided", details: nil))
+      }
     default:
       result(FlutterMethodNotImplemented)
     }
-  
+}
+
+ private func executeFFmpegCommand(_ command: [String], result: @escaping FlutterResult) {
+    DispatchQueue.global(qos: .background).async {
+      let joinedCommand = command.joined(separator: " ")
+      
+      FFmpegKit.executeAsync(joinedCommand) { session in
+    // Get the return code properly
+    let returnCode = session?.getReturnCode()?.getValue()
+
+    // Ensure result is returned on the main thread
+    DispatchQueue.main.async {
+        if returnCode == 0 {
+            result("FFmpeg command executed successfully!")
+        } else {
+            result(FlutterError(
+                code: "FFMPEG_ERROR",
+                message: "Error executing FFmpeg command.",
+                details: "Exit code: \(String(describing: returnCode))"
+            ))
+        }
+    }
+}
+    }
 }
 }
