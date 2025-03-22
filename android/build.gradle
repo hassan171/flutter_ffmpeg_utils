@@ -66,6 +66,18 @@ android {
 }
 
 dependencies {
-    implementation 'com.arthenica:ffmpeg-kit-full:6.0'
+    implementation 'com.arthenica:ffmpeg-kit-min:6.0'
 }
 
+
+android {
+    splits {
+        abi {
+            enable true
+            reset()
+            // Include all necessary ABIs for wide compatibility
+            include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            universalApk false // Set to true if you also want a universal APK
+        }
+    }
+}

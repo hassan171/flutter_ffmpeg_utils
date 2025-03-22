@@ -5,7 +5,6 @@ A Flutter plugin to execute raw FFmpeg commands on Android and iOS.
 ## 🚀 Features
 - Run **raw FFmpeg commands** directly on Android and iOS.
 - Supports complex media operations such as trimming, merging, and transcoding.
-- Fully compatible with `mobile-ffmpeg` on Android and `ffmpeg-kit-ios-full` on iOS.
 
 ---
 
