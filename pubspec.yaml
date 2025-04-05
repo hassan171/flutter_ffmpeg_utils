@@ -5,8 +5,8 @@ homepage: https://github.com/Raghav117/flutter_ffmpeg_utils
 repository: https://github.com/Raghav117/flutter_ffmpeg_utils
 
 environment:
-  sdk: ^3.7.0
-  flutter: '>=3.3.0'
+  sdk: ^3.5.0
+  flutter: ">=3.3.0"
 
 dependencies:
   flutter:
